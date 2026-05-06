@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COOL FLOW</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>  
+    <!-- Header -->
+    <header>
+        <div class="logo">COOL FLOW</div>
+        <button class="menu-toggle" id="menuToggle">☰</button>
+        <nav id="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#photos">Photos</a>
+            <a href="#video">Video</a>
+        </nav>
+        <button class="contact-btn">Contact</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Learning today, Leading tomorrow</h1>
+            <p>To capture attention.</p>
+            <p>To engage with high-quality imagery to enhance user engagement.</p>
+            <ul>
+                <li>Capture attention</li>
+                <li>Engage with high-quality imagery</li>
+                <li>Enhance user engagement</li>
+            </ul>
+        </div>
+        <div class="hero-branding">
+            <div class="cool-flow-badge">
+                <img src="images/coolFlow.jpg" alt="COOL FLOW Logo" class="logo-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Photos Section -->
+    <section class="photos-section" id="photos">
+        <h2>Photos</h2>
+        <div class="photo-grid" id="photoGrid">
+            <div class="photo-item">
+                <img src="images/photo1.jpg" alt="Photo 1">
+            </div>
+            <div class="photo-item">
+                <img src="images/photo2.jpg" alt="Photo 2">
+            </div>
+            <div class="photo-item">
+                <img src="images/photo3.jpg" alt="Photo 3">
+            </div>
+            <div class="photo-item">
+                <img src="images/photo4.jpg" alt="Photo 4">
+             </div>
+            <div class="photo-item">
+                <img src="images/photo5.jpg" alt="Photo 5">
+            </div>
+            <div class="photo-item">
+                <img src="images/photo6.jpg" alt="Photo 6">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('#navbar a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('navbar').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
